@@ -1,0 +1,32 @@
+
+CODE BY BRICE NGNIGHA
+
+
+DIGITAL FILTER APPLICATION
+
+To buid:
+	run make from the root directory
+	the executable will be found in the buiold/bin directory
+	
+To execute:
+	keep the original image in the root directory of this project
+	digitalFilter <image.png>  <filter1> ... <filterN>
+	
+	Choices of filters are: boxblur, edge, edge2, edge3, grayscale, gaussian, gaussian5,
+							sharpen, unsharpen, identity, emboss.
+							These filters have their kernels already predefinec in main.h file
+	
+	The user may also pass in their own filters at command line in this manner:
+	digitalFilter <image.png>  convolution <num elements in kernel> <kernel row wise>
+	e.g after make run:
+		digitalFilter house.png convolution 9  1 2 1  2 4 2  1 2 1 
+		digitalFilter house.png convolution 9  1 2 1  2 4 2  1 2 1 emboss edge
+		digitalFilter house.png boxblur convolution 9  1 2 1  2 4 2  1 2 1 sharpen
+		
+The results will be found in the ,.output folder
+
+For questions, email
+bricengnigha@utexas.edu
+	
+
+
